@@ -728,12 +728,12 @@ graph TD
 
     subgraph Security Measures
         UF[User Awareness / Secure Env]
-        FS[Frontend Security (XSS/CSRF Prevention, Dep Mgmt, Headers)]
-        WS[Web Server Security (HSTS, Rate Limiting, WAF)]
-        BS[Backend Security (AuthZ/AuthN, Input Validation, Secure Coding)]
-        DS[Database Security (Encryption, Access Control)]
-        ISec[Infrastructure Security (Firewalls, Patching, Monitoring)]
-        OP[Operational Security (Logging, Auditing, Incident Response)]
+        FS["Frontend Security (XSS/CSRF Prevention, Dep Mgmt, Headers)"]
+        WS["Web Server Security (HSTS, Rate Limiting, WAF)"]
+        BS["Backend Security (AuthZ/AuthN, Input Validation, Secure Coding)"]
+        DS["Database Security (Encryption, Access Control)"]
+        ISec["Infrastructure Security (Firewalls, Patching, Monitoring)"]
+        OP["Operational Security (Logging, Auditing, Incident Response)"]
     end
 
     U --> F
@@ -743,15 +743,6 @@ graph TD
     DB --> DS
     IS --> ISec
     U --> UF
-
-    style F fill:#ccf,stroke:#333,stroke-width:2px
-    style FS fill:#f9f,stroke:#333,stroke-width:1px
-    style W fill:#cdf,stroke:#333,stroke-width:2px
-    style B fill:#ddf,stroke:#333,stroke-width:2px
-    style DB fill:#eef,stroke:#333,stroke-width:2px
-    style IS fill:#eee,stroke:#333,stroke-width:2px
-
-    linkStyle default stroke:#666;
 ```
 
 _Diagram Explanation:_ This diagram illustrates the layered nature of web application security. Security measures (pink boxes) apply at each layer, from the user's environment through the frontend, web server, backend, database, and infrastructure. Frontend security is a critical layer, but it relies on and complements security measures implemented at other levels. A vulnerability in any layer can potentially compromise the system.

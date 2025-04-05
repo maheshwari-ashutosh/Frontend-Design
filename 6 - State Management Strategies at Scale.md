@@ -464,7 +464,7 @@ export const selectSortedWishlistItems = createSelector(
 graph LR
     subgraph Redux Data Flow
         A[Component Event] --> B(Dispatch Action);
-        B --> C{Middleware (Thunks/Sagas)};
+        B --> C{"Middleware (Thunks/Sagas)"};
         C -- Async Ops --> D[API Call];
         D -- Response --> C;
         C -- Action --> E[Reducer];

@@ -378,7 +378,7 @@ Frontend performance directly impacts user experience, conversion rates, and sea
 ```mermaid
 graph TD
     A[Large JS Bundle] --> B(Slow Download & Parse);
-    B --> C{Long Time To Interactive (TTI)};
+    B --> C{Long Time To Interactive_TTI};
     D[Large Images/Assets] --> E(Slow Download);
     E --> F{Increased Page Load Time};
     C --> G((Poor User Experience));

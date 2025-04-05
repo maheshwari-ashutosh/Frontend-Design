@@ -211,8 +211,8 @@ flowchart TD
     subgraph Error Handling Flow
         D -- No --> E[App Crashes / Default Handler];
         D -- Yes --> F[ErrorBoundary Catches Error];
-        F --> G[Log Error Internally (console)];
-        F --> H[Report Error Externally (Sentry, etc.)];
+        F --> G["Log Error Internally (console)"];
+        F --> H["Report Error Externally (Sentry, etc.)"];
         F --> I[Render Fallback UI];
         I --> J[User Sees Graceful Error Message];
     end

@@ -1422,16 +1422,16 @@ mindmap
 graph TD
     subgraph Frontend Application
         direction LR
-        Comp[Component / Hook (High-Level)] -- Depends on --> Abstraction[IUserService (Abstraction)];
-        DI[(Dependency Injection<br/>e.g., Context, Hook, Container)];
+        Comp["Component / Hook (High-Level)"] -- Depends on --> Abstraction["IUserService (Abstraction)"];
+        DI["(Dependency Injection<br/>e.g., Context, Hook, Container)"];
         DI -- Provides --> Comp;
-        ConcreteService[RestUserService (Low-Level Detail)] -- Implements --> Abstraction;
+        ConcreteService["RestUserService (Low-Level Detail)"] -- Implements --> Abstraction;
         DI -- Resolves to --> ConcreteService;
     end
 
     subgraph Testing / Flexibility
         direction LR
-        MockService[MockUserService (Alternative Detail)] -- Implements --> Abstraction;
+        MockService["MockUserService (Alternative Detail)"] -- Implements --> Abstraction;
         DI_Test(DI during Test);
         DI_Test -- Provides --> Comp;
         DI_Test -- Resolves to --> MockService;

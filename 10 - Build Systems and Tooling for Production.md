@@ -125,16 +125,16 @@ Vite (French for "fast") is a newer build tool that significantly improves the d
 graph TD
     subgraph Vite Development Server
         A[Browser Request] --> B{Vite Dev Server};
-        B -- Native ESM --> C[Source Code (.js, .jsx, .vue)];
-        B -- Pre-bundled deps --> D[Dependencies (node_modules)];
+        B -- Native ESM --> C["Source Code (.js, .jsx, .vue)"];
+        B -- Pre-bundled deps --> D["Dependencies (node_modules)"];
         C --> B;
         D --> B;
         B --> E[Browser Execution];
     end
 
-    subgraph Vite Production Build (uses Rollup)
+    subgraph "Vite Production Build (uses Rollup)"
         F[Source Code + Dependencies] --> G{Rollup};
-        G --> H[Optimized Bundles (.js, .css)];
+        G --> H["Optimized Bundles (.js, .css)"];
     end
 
     A --> F;

@@ -296,16 +296,17 @@ graph TD
 
     subgraph Deploy New Version
         Deploy --> Green;
-        style Green fill:#ccffcc
+        style Green fill:#ccffcc;
     end
 
     subgraph Switch Traffic
         LB2(Load Balancer) --> Green;
-        style Green fill:#90ee90
+        style Green fill:#90ee90;
         Blue -- Becomes Idle --> RollbackTarget(Version 1 - Standby);
     end
 
-    Before Deployment --> Deploy New Version --> Switch Traffic;
+    Before_Deployment --> Deploy_New_Version;
+    Deploy_New_Version --> Switch_Traffic;
 ```
 
 > **Diagram Explanation:** This diagram illustrates the Blue/Green deployment process. Traffic initially goes to Blue. The new version is deployed to Green. After validation, the load balancer switches traffic to Green, making it live. Blue remains available for instant rollback.

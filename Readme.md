@@ -43,7 +43,7 @@ You can navigate the book using the Table of Contents below. While chapters can 
 
 - [Chapter 11: Monorepos vs. Polyrepos for Frontend Ecosystems](11%20-%20Monorepos%20vs.%20Polyrepos%20for%20Frontend%20Ecosystems.md)
 - [Chapter 12: Micro-Frontends Architecture](12%20-%20Micro-Frontends%20Architecture.md)
-- [Chapter 13: Design Systems: Building and Scaling UI Consistency](13%20-%20Design%20Systems%20Building%20and%20Scaling%20UI%20Consistency.md)
+- [Chapter 13: Design Systems - Building and Scaling UI Consistency](13%20-%20Design%20Systems%20-%20Building%20and%20Scaling%20UI%20Consistency.md)
 - [Chapter 14: Cross-Cutting Concerns in Frontend Systems](14%20-%20Cross-Cutting%20Concerns%20in%20Frontend%20Systems.md)
 
 **Part V: Performance, Optimization & Resilience**

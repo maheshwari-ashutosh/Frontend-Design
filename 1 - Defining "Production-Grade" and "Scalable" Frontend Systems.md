@@ -53,15 +53,15 @@ Achieving production-grade scalability requires considering the entire lifecycle
 
 ```mermaid
 graph LR
-    A[Developer Laptop <br/>(Code, Local Test)] --> B(Version Control System <br/>(Git, Code Review));
-    B --> C{CI/CD Pipeline <br/>(Build, Test, Lint)};
-    C --> D[Artifact Repository <br/>(Bundled Assets)];
-    D --> E(Content Delivery Network (CDN) / Servers <br/>(Global Distribution, Caching));
-    E --> F[User's Browser <br/>(Download, Parse, Execute, Render)];
-    F --> G(Backend APIs <br/>(Data Fetching));
-    F --> H{Monitoring & Analytics <br/>(Performance, Errors, Usage)};
+    A["Developer Laptop <br/>(Code, Local Test)"] --> B("Version Control System <br/>(Git, Code Review)");
+    B --> C{"CI/CD Pipeline <br/>(Build, Test, Lint)"};
+    C --> D["Artifact Repository <br/>(Bundled Assets)"];
+    D --> E("Content Delivery Network (CDN) / Servers <br/>(Global Distribution, Caching)");
+    E --> F["User's Browser <br/>(Download, Parse, Execute, Render)"];
+    F --> G("Backend APIs <br/>(Data Fetching)");
+    F --> H{"Monitoring & Analytics <br/>(Performance, Errors, Usage)"};
     H --> I[Alerting System];
-    I --> J(Operations/Dev Team <br/>(Debugging, Incident Response));
+    I --> J("Operations/Dev Team <br/>(Debugging, Incident Response)");
 
     style A fill:#f9f,stroke:#333,stroke-width:2px
     style F fill:#ccf,stroke:#333,stroke-width:2px

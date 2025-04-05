@@ -150,15 +150,15 @@ Web Components (Custom Elements, Shadow DOM, HTML Templates) offer a framework-a
 graph TD
     subgraph Monolith
         direction LR
-        M_UI[UI Layer (Single Build)] --> M_Logic[Business Logic]
+        M_UI["UI Layer (Single Build)"] --> M_Logic[Business Logic]
         M_Logic --> M_Data[Data Access]
     end
 
-    subgraph Micro-Frontends (Conceptual)
+    subgraph "Micro-Frontends (Conceptual)"
         direction LR
-        Shell[App Shell/Container] --> MFE1[MFE 1 (Team A)]
-        Shell --> MFE2[MFE 2 (Team B)]
-        Shell --> MFE3[MFE 3 (Team C)]
+        Shell[App Shell/Container] --> MFE1["MFE 1 (Team A)"]
+        Shell --> MFE2["MFE 2 (Team B)"]
+        Shell --> MFE3["MFE 3 (Team C)"]
         MFE1 --> Svc1[Backend Service 1]
         MFE2 --> Svc2[Backend Service 2]
         MFE3 --> Svc3[Backend Service 3]
@@ -182,17 +182,17 @@ Webpack Module Federation, introduced in Webpack 5, is a game-changer for implem
 
 ```mermaid
 graph LR
-    HostApp[Host Application (e.g., Shell)] -- Loads --> RemoteModule
-    RemoteApp[Remote Application (MFE)] -- Exposes --> RemoteModule[Exposed Module (e.g., ./Widget)]
-    HostApp -- Shares --> SharedLib[Shared Library (e.g., React)]
+    HostApp["Host Application (e.g., Shell)"] -- Loads --> RemoteModule
+    RemoteApp["Remote Application (MFE)"] -- Exposes --> RemoteModule["Exposed Module (e.g., ./Widget)"]
+    HostApp -- Shares --> SharedLib["Shared Library (e.g., React)"]
     RemoteApp -- Shares --> SharedLib
 
     subgraph "Host Webpack Config"
-        HostPlugin[ModuleFederationPlugin\n(remotes: { mfe1: 'mfe1@...' })]
+        HostPlugin["ModuleFederationPlugin\n(remotes: { mfe1: 'mfe1@...' })"]
     end
 
     subgraph "Remote Webpack Config"
-        RemotePlugin[ModuleFederationPlugin\n(name: 'mfe1', exposes: { './Widget': ... }, shared: ['react'])]
+        RemotePlugin["ModuleFederationPlugin\n(name: 'mfe1', exposes: { './Widget': ... }, shared: ['react'])"]
     end
 
     HostApp --> HostPlugin

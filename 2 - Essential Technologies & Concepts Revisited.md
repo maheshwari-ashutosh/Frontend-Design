@@ -563,7 +563,7 @@ mindmap
       Definition: Largest Contentful Paint
       Measures: Perceived load speed (when main content likely loaded)
       Goal: < 2.5 seconds
-      Causes: Slow server, Render-blocking JS/CSS, Slow resource loads (images, fonts), Client-side rendering delays
+      Causes: Slow server, Render-blocking JS/CSS, Slow resource loads images, fonts, Client-side rendering delays
       Optimization: Optimize images/server, Critical CSS, Preload resources, Reduce JS blocking time, SSR/SSG
     FID/INP (Interactivity)
       ::icon(fa fa-hand-pointer)
@@ -578,7 +578,7 @@ mindmap
       Measures: Unexpected layout shifts during page lifespan
       Goal: < 0.1
       Causes: Images/ads without dimensions, Dynamically injected content without reserved space, Web fonts causing FOIT/FOUT, Animations triggering layout
-      Optimization: Size attributes on media, Reserve space for dynamic content/ads, Optimize font loading (`font-display`, preloading), Use `transform` animations
+      Optimization: Size attributes on media, Reserve space for dynamic content/ads, Optimize font loading `font-display`, preloading, Use `transform` animations
     (Other Metrics)
       TTFB (Time to First Byte)
       FCP (First Contentful Paint)

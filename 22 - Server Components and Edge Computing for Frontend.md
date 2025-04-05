@@ -69,16 +69,16 @@ The core idea is the distinction between two types of components coexisting in t
 ```mermaid
 graph LR
     subgraph Server
-        RSC1[Server Component 1<br/>(e.g., PageLayout.js)] -- Renders --> RSC2[Server Component 2<br/>(e.g., DataDisplay.js)]
-        RSC1 -- Renders --> CC1_Marker(Client Component Marker<br/>'use client')
+        RSC1["Server Component 1 (e.g., PageLayout.js)"] -- Renders --> RSC2["Server Component 2 (e.g., DataDisplay.js)"]
+        RSC1 -- Renders --> CC1_Marker["Client Component Marker 'use client'"]
     end
 
     subgraph Client Bundle
-        CC1[Client Component 1<br/>(e.g., InteractiveButton.js)]
+        CC1["Client Component 1 (e.g., InteractiveButton.js)"]
     end
 
     subgraph Browser
-        RenderedUI[Rendered UI]
+        RenderedUI["Rendered UI"]
         Hydration --> CC1
     end
 

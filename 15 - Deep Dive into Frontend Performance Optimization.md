@@ -334,7 +334,7 @@ graph TD
     A[Start Recording Performance Profile] --> B(Perform Slow Interaction);
     B --> C(Stop Recording);
     C --> D{Examine Main Thread Timeline};
-    D --> E[Identify Long Tasks (>50ms)];
+    D --> E["Identify Long Tasks (>50ms)"];
     E --> F{Analyze Flame Chart};
     F --> G[Find Wide Blocks / High Total Time Functions];
     G --> H(Correlate with Source Code);

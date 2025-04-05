@@ -196,12 +196,12 @@ Efficient CI/CD is paramount for monorepos to avoid cripplingly slow pipelines.
 flowchart LR
     A[Commit Pushed] --> B{CI Pipeline Triggered};
     B --> C[Checkout Code];
-    C --> D[Install Dependencies (Root)];
-    D --> E{Identify Affected Projects\n(e.g., `nx affected --base=main`)};
-    E -- Affected Projects --> F[Run Tasks (Lint, Test, Build)\nOnly on Affected];
+    C --> D["Install Dependencies (Root)"];
+    D --> E{"Identify Affected Projects\n(e.g., `nx affected --base=main`)"};
+    E -- Affected Projects --> F["Run Tasks (Lint, Test, Build)\nOnly on Affected"];
     F --> G{Utilize Remote Cache};
     G --> H[Deploy Affected Apps];
-    E -- No Affected Projects --> I[Pipeline Success (No-op)];
+    E -- No Affected Projects --> I["Pipeline Success (No-op)"];
     H --> J[Pipeline Success];
 ```
 

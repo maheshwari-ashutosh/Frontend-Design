@@ -154,23 +154,23 @@ This is one of the most critical and complex aspects of Wasm integration.
 ```mermaid
 graph LR
     subgraph JavaScript Environment
-        JS_Code[JavaScript Code]
-        JS_Heap[JS Heap (Objects, Strings)]
-        Wasm_Memory_View[JS View of Wasm Memory (ArrayBuffer)]
+        JS_Code["JavaScript Code"]
+        JS_Heap["JS Heap (Objects, Strings)"]
+        Wasm_Memory_View["JS View of Wasm Memory (ArrayBuffer)"]
     end
 
     subgraph Wasm Environment
-        Wasm_Code[Wasm Module Code]
-        Wasm_Linear_Memory[Linear Memory (Raw Bytes)]
-        Wasm_Stack[Wasm Stack]
+        Wasm_Code["Wasm Module Code"]
+        Wasm_Linear_Memory["Linear Memory (Raw Bytes)"]
+        Wasm_Stack["Wasm Stack"]
     end
 
-    JS_Code -- Calls --> Exported_Wasm_Func(Exported Wasm Function)
+    JS_Code -- Calls --> Exported_Wasm_Func["Exported Wasm Function"]
     Exported_Wasm_Func -- Executes --> Wasm_Code
     Wasm_Code -- Reads/Writes --> Wasm_Linear_Memory
     JS_Code -- Reads/Writes --> Wasm_Memory_View -- Represents --> Wasm_Linear_Memory
 
-    Wasm_Code -- Calls --> Imported_JS_Func(Imported JS Function)
+    Wasm_Code -- Calls --> Imported_JS_Func["Imported JS Function"]
     Imported_JS_Func -- Executes --> JS_Code
 
     JS_Code -- Copies Data To --> Wasm_Memory_View
